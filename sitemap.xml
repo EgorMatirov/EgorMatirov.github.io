@@ -3,50 +3,50 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/post/gsoc-go-xrootd-1/</loc>
+    <loc>https://egormatirov.github.io/post/gsoc-go-xrootd-1/</loc>
     <lastmod>2018-05-27T09:19:47+04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/content/about/</loc>
+    <loc>https://egormatirov.github.io/content/about/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://egormatirov.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/content/</loc>
+    <loc>https://egormatirov.github.io/content/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/go/</loc>
-    <lastmod>2018-05-27T09:19:47+04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/gsoc/</loc>
+    <loc>https://egormatirov.github.io/tags/go/</loc>
     <lastmod>2018-05-27T09:19:47+04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://egormatirov.github.io/tags/gsoc/</loc>
     <lastmod>2018-05-27T09:19:47+04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://egormatirov.github.io/</loc>
     <lastmod>2018-05-27T09:19:47+04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://egormatirov.github.io/post/</loc>
+    <lastmod>2018-05-27T09:19:47+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://egormatirov.github.io/tags/</loc>
     <lastmod>2018-05-27T09:19:47+04:00</lastmod>
     <priority>0</priority>
   </url>
