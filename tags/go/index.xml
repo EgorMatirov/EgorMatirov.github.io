@@ -6,7 +6,7 @@
     <description>Recent content in Go on Mikhail Ivchenko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jun 2018 23:19:47 +0400</lastBuildDate>
+    <lastBuildDate>Sun, 27 May 2018 09:19:47 +0400</lastBuildDate>
     
 	<atom:link href="https://egormatirov.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>(GSoC) Pure-Go client for XRootD: Weeks 1 &amp; 2</title>
       <link>https://egormatirov.github.io/post/gsoc-go-xrootd-1/</link>
-      <pubDate>Mon, 11 Jun 2018 23:19:47 +0400</pubDate>
+      <pubDate>Sun, 27 May 2018 09:19:47 +0400</pubDate>
       
       <guid>https://egormatirov.github.io/post/gsoc-go-xrootd-1/</guid>
       <description>I am happy to announce that this summer I am working on the GSoC 2018 project titled &amp;ldquo;Pure-Go client for XRootD&amp;rdquo;.
