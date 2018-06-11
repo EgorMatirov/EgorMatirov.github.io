@@ -23,6 +23,17 @@ XRootD is a protocol for access to the clustered data repositories and I am goin
     </item>
     
     <item>
+      <title>(GSoC) Pure-Go client for XRootD: Weeks 3 &amp; 4</title>
+      <link>https://egormatirov.github.io/post/gsoc-go-xrootd-2/</link>
+      <pubDate>Sun, 27 May 2018 09:19:47 +0400</pubDate>
+      
+      <guid>https://egormatirov.github.io/post/gsoc-go-xrootd-2/</guid>
+      <description>I am happy to announce that this summer I am working on the GSoC 2018 project titled &amp;ldquo;Pure-Go client for XRootD&amp;rdquo;.
+This project is a part of Go-HEP project which brings a set of libraries and applications for High Energy Physicists written in the Go programming language.
+XRootD is a protocol for access to the clustered data repositories and I am going to implement a client for that protocol and FUSE-based file system using that client.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://egormatirov.github.io/content/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
