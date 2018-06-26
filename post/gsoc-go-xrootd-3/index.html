@@ -16,17 +16,19 @@ body, body.pushable {
 }
 
 </style><title>
-All Tags
+(GSoC) Pure-Go client for XRootD: Weeks 5 &amp; 6
 </title><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="author" content="Mikhail Ivchenko" />
-	<meta name="description" content="Just a random blog for random stuff, mostly tech-related." />
+	<meta name="description" content="I am happy to announce that this summer I am working on the GSoC 2018 project titled &amp;ldquo;Pure-Go client for XRootD&amp;rdquo;.
+This project is a part of Go-HEP project which brings a set of libraries and applications for High Energy Physicists written in the Go programming language.
+XRootD is a protocol for access to the clustered data repositories and I am going to implement a client for that protocol and FUSE-based file system using that client." />
 <meta name="generator" content="Hugo 0.40.3" />
 
 <link rel="shortcut icon" href="/img/defaultFav.ico">
 
-<link rel="canonical" href="https://egormatirov.github.io/tags/" />
+<link rel="canonical" href="https://egormatirov.github.io/post/gsoc-go-xrootd-3/" />
 <link rel="alternative" href="/index.xml" title="Mikhail Ivchenko" type="application/atom+xml"/><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
 <style>
 body.pushable {
@@ -102,28 +104,33 @@ var bodyBgSwitchIndex = 0;
 		<div class="flipper">
 			<div class="front">
 <nav class="ui top secondary menu bar">
-	<div id="surrico" class="item">
-		<i id="ico" class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
-	</div>
 	<div class="item">
-		<a href="/"><i id="ico" class="inverted big link home icon" title="Home"></i></a>
-	</div>
-
-	
-	<div class="item">
-		<a href="/post">
-			<i id="ico" class="inverted big link archive icon" title="Archive"></i>
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div><div class="item">
+		<a href="/">
+			<i class="inverted big link home icon" title="Home"></i>
 		</a>
 	</div>
+	<div class="item">
+		<a href="/post">
+			<i class="inverted big link archive icon" title="Archive"></i>
+		</a>
+	</div>
+	<div class="item">
+		<a href="/tags">
+			<i class="inverted big link tags icon" title="All Tags"></i>
+		</a>
+	</div>
+	<div class="ui container tablet computer only grid">
+		<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
+			<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
+		</div>
+	</div>
 	
-
-	
-
 </nav>
 
 <div class="ui centered grid">
-	<div class="sixteen wide mobile fifteen wide tablet four wide computer column">
-		<div class="ui inverted accordion">
+	<div class="sixteen wide mobile only column"><div class="ui inverted accordion">
 	<div id="header" class="ui inverted segment column box">
 		<header id="author" class="ui top attached center aligned inverted segment"><div class="ui small circular image">
 	<img src="/images/myavatar.jpg">
@@ -132,10 +139,10 @@ var bodyBgSwitchIndex = 0;
 	<div class="sub header"></div>
 </h3>
 </header>
-		<div class="active title header-title"><div id="tag-category-pop" class="ui red right corner label">		
-				<i class="hand point icon up"title="Click this to pop tags and categories"></i>		
+		<div class=" title header-title"><div id="tag-category-pop" class="ui red right corner label">		
+				<i class="hand point icon down"title="Click this to pop tags and categories"></i>		
 			</div></div>
-		<div id="tag-category" class="active content"><section class="ui attached center aligned inverted segment dream-tags none flexbox">
+		<div id="tag-category" class=" content"><section class="ui attached center aligned inverted segment dream-tags none flexbox">
 <a class="ui label" href="/tags/go" title="go">go</a>
 
 <a class="ui label" href="/tags/gsoc" title="gsoc">gsoc</a>
@@ -146,45 +153,64 @@ var bodyBgSwitchIndex = 0;
     
 <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p></footer>
 	</div>
+</div></div>
+	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
+		<section class="ui secondary top attached black segment post-head">
+			<h1 class="post-title">
+				(GSoC) Pure-Go client for XRootD: Weeks 5 &amp; 6
+			</h1>
+			<div class="sub header">
+					<div><span><i class="calendar outline icon"></i>Jun 26, 2018</span></div>
+					<div><span><i class="clock outline icon"></i>1 min read</span></div>
+					<div><span><i class="angle double up icon"></i>Last updated on Jun 26, 2018</span></div>
+			</div>
+			<hr>
+			<article class="post-content twemoji">
+				<p>I am happy to announce that this summer I am working on the <a href="https://summerofcode.withgoogle.com/">GSoC 2018</a> project titled <a href="https://github.com/go-hep/hep/tree/master/xrootd">&ldquo;Pure-Go client for XRootD&rdquo;</a>.<br />
+This project is a part of <a href="https://go-hep.org">Go-HEP</a> project which brings a set of libraries and applications for High Energy Physicists written in the <a href="https://golang.org/">Go</a> programming language.</p>
+
+<p><a href="http://xrootd.org/">XRootD</a> is a protocol for access to the clustered data repositories and I am going to implement a client for that protocol and FUSE-based file system using that client.</p>
+
+<p>During these 2 weeks I have worked on such features:</p>
+
+<ul>
+<li>Support of the krb5 (<a href="https://en.wikipedia.org/wiki/Kerberos_(protocol)">Kerberos</a>) authentication protocol. It&rsquo;s much more secure than previously implemented &ldquo;unix&rdquo; authentication and can be used in real-life scenarios.</li>
+<li>Support for the redirections. They are used when a file is not stored on the current server but it knows where to redirect client. Adding this feature makes it possible to copy files from the <code>eospublic.cern.ch</code>, yay!</li>
+</ul>
+
+<p>As for now, I am working on improving redirection support and implementing support for the GSI authentication protocol. I have already managed to configure the XRootD server to use the GSI and currently working on implementing authentication process in Go.</p>
+
+			</article>
+		</section>
+		<section class="ui secondary attached segment dream-tags">
+<a class="ui label" href="/tags/go" title="go">go</a>
+
+<a class="ui label" href="/tags/gsoc" title="gsoc">gsoc</a>
+
+
+		</section><section class="ui secondary bottom attached segment share row box"><div class="author"><img class="avatar" src="/images/myavatar.jpg">
+	
 </div>
+<div class="info grow flexbox">
+	<p class="name">Mikhail Ivchenko</p>
+	<p class="desc"></p>		
+</div>
+<section class="buttons row box">
+	<div class="facebook none flexbox" href="#" onclick="window.open(
+			'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+			'facebook-share-dialog',
+			'width=626,height=436'); return false;">
+		<button class="ui facebook button"><i class="facebook icon"></i>Share</button>
 	</div>
-	<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
-		<div class="ui inverted segment">
-			<h2 class="ui header">All Tags<hr />
-</h2>
+	<div class="twitter none flexbox" onclick="window.open('https://twitter.com/intent/tweet?text=Read &quot;(GSoC) Pure-Go client for XRootD: Weeks 5 \x26 6  https:\/\/egormatirov.github.io\/post\/gsoc-go-xrootd-3\/','_self')">
+		<button class="ui twitter button"><i class="twitter icon"></i>Tweet</button>
+	</div>
+</section>
+</section>
+		<section class="ui secondary attached segment copyright">
 			
-			
-			
-			<h3 class="ui header">
-				<a href="/tags/go/">go</a>
-				-  (3 articles)
-			</h3>
-			<ul>
-				
-				<li><a href="https://egormatirov.github.io/post/gsoc-go-xrootd-3/">(GSoC) Pure-Go client for XRootD: Weeks 5 &amp; 6</a></li>
-				
-				<li><a href="https://egormatirov.github.io/post/gsoc-go-xrootd-2/">(GSoC) Pure-Go client for XRootD: Weeks 3 &amp; 4</a></li>
-				
-				<li><a href="https://egormatirov.github.io/post/gsoc-go-xrootd-1/">(GSoC) Pure-Go client for XRootD: Weeks 1 &amp; 2</a></li>
-				
-			</ul>
-			
-			
-			<h3 class="ui header">
-				<a href="/tags/gsoc/">gsoc</a>
-				-  (3 articles)
-			</h3>
-			<ul>
-				
-				<li><a href="https://egormatirov.github.io/post/gsoc-go-xrootd-3/">(GSoC) Pure-Go client for XRootD: Weeks 5 &amp; 6</a></li>
-				
-				<li><a href="https://egormatirov.github.io/post/gsoc-go-xrootd-2/">(GSoC) Pure-Go client for XRootD: Weeks 3 &amp; 4</a></li>
-				
-				<li><a href="https://egormatirov.github.io/post/gsoc-go-xrootd-1/">(GSoC) Pure-Go client for XRootD: Weeks 1 &amp; 2</a></li>
-				
-			</ul>
-			
-		</div>
+		</section>
+		
 	</div>
 </div>
 
