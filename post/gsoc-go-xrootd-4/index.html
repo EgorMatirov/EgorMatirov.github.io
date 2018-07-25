@@ -16,19 +16,19 @@ body, body.pushable {
 }
 
 </style><title>
-
-Tag | go
-
+(GSoC) Pure-Go client for XRootD: Weeks 7–10
 </title><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="author" content="Mikhail Ivchenko" />
-	<meta name="description" content="Just a random blog for random stuff, mostly tech-related." />
+	<meta name="description" content="I am happy to announce that this summer I am working on the GSoC 2018 project titled &amp;ldquo;Pure-Go client for XRootD&amp;rdquo;.
+This project is a part of Go-HEP project which brings a set of libraries and applications for High Energy Physicists written in the Go programming language.
+XRootD is a protocol for access to the clustered data repositories and I am going to implement a client for that protocol and FUSE-based file system using that client." />
 <meta name="generator" content="Hugo 0.40.3" />
 
 <link rel="shortcut icon" href="/img/defaultFav.ico">
 
-<link rel="canonical" href="https://egormatirov.github.io/tags/go/" />
+<link rel="canonical" href="https://egormatirov.github.io/post/gsoc-go-xrootd-4/" />
 <link rel="alternative" href="/index.xml" title="Mikhail Ivchenko" type="application/atom+xml"/><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
 <style>
 body.pushable {
@@ -121,22 +121,16 @@ var bodyBgSwitchIndex = 0;
 			<i class="inverted big link tags icon" title="All Tags"></i>
 		</a>
 	</div>
-	
-	<div class="item">
-		
-		<i class="disabled inverted big chevron circle left icon" title="Previous page"></i>
-  	
-  </div>
-	<div class="item">	
-		<i class="disabled inverted big chevron circle right icon" title="Next page"></i>
-		
+	<div class="ui container tablet computer only grid">
+		<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
+			<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
+		</div>
 	</div>
 	
 </nav>
 
 <div class="ui centered grid">
-	<div class="fifteen wide mobile fifteen wide tablet four wide computer column">
-		<div class="ui inverted accordion">
+	<div class="sixteen wide mobile only column"><div class="ui inverted accordion">
 	<div id="header" class="ui inverted segment column box">
 		<header id="author" class="ui top attached center aligned inverted segment"><div class="ui small circular image">
 	<img src="/images/myavatar.jpg">
@@ -145,10 +139,10 @@ var bodyBgSwitchIndex = 0;
 	<div class="sub header"></div>
 </h3>
 </header>
-		<div class="active title header-title"><div id="tag-category-pop" class="ui red right corner label">		
-				<i class="hand point icon up"title="Click this to pop tags and categories"></i>		
+		<div class=" title header-title"><div id="tag-category-pop" class="ui red right corner label">		
+				<i class="hand point icon down"title="Click this to pop tags and categories"></i>		
 			</div></div>
-		<div id="tag-category" class="active content"><section class="ui attached center aligned inverted segment dream-tags none flexbox">
+		<div id="tag-category" class=" content"><section class="ui attached center aligned inverted segment dream-tags none flexbox">
 <a class="ui label" href="/tags/go" title="go">go</a>
 
 <a class="ui label" href="/tags/gsoc" title="gsoc">gsoc</a>
@@ -159,82 +153,64 @@ var bodyBgSwitchIndex = 0;
     
 <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p></footer>
 	</div>
+</div></div>
+	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
+		<section class="ui secondary top attached black segment post-head">
+			<h1 class="post-title">
+				(GSoC) Pure-Go client for XRootD: Weeks 7–10
+			</h1>
+			<div class="sub header">
+					<div><span><i class="calendar outline icon"></i>Jul 25, 2018</span></div>
+					<div><span><i class="clock outline icon"></i>2 min read</span></div>
+					<div><span><i class="angle double up icon"></i>Last updated on Jul 25, 2018</span></div>
+			</div>
+			<hr>
+			<article class="post-content twemoji">
+				<p>I am happy to announce that this summer I am working on the <a href="https://summerofcode.withgoogle.com/">GSoC 2018</a> project titled <a href="https://github.com/go-hep/hep/tree/master/xrootd">&ldquo;Pure-Go client for XRootD&rdquo;</a>.<br />
+This project is a part of <a href="https://go-hep.org">Go-HEP</a> project which brings a set of libraries and applications for High Energy Physicists written in the <a href="https://golang.org/">Go</a> programming language.</p>
+
+<p><a href="http://xrootd.org/">XRootD</a> is a protocol for access to the clustered data repositories and I am going to implement a client for that protocol and FUSE-based file system using that client.</p>
+
+<p>Wow! Time flies really fast.
+During the first part of this work session, I spent time trying to examine GSI authentication protocol. However, it appears that XRootD uses a custom protocol for that and specification is not yet available. See <a href="https://github.com/xrootd/xrootd/issues/757">an issue</a> for details.</p>
+
+<p>After that, I worked on FUSE-based filesystem implementation. It allows mounting a remote directory over XRootD to the local directory and performing most of the file operations (links are not supported, however).</p>
+
+<p>Also, I have added a bind request that provides support for multiple sockets usage. For example, it&rsquo;s possible to read a huge file over one connection and execute small commands over second connection simultaneously.</p>
+
+<p>And, finally, I have started working on a basic implementation of the XRootD server. It already allows a user to login (not authenticate thought) and list contents of a directory!</p>
+
+			</article>
+		</section>
+		<section class="ui secondary attached segment dream-tags">
+<a class="ui label" href="/tags/go" title="go">go</a>
+
+<a class="ui label" href="/tags/gsoc" title="gsoc">gsoc</a>
+
+
+		</section><section class="ui secondary bottom attached segment share row box"><div class="author"><img class="avatar" src="/images/myavatar.jpg">
+	
 </div>
+<div class="info grow flexbox">
+	<p class="name">Mikhail Ivchenko</p>
+	<p class="desc"></p>		
+</div>
+<section class="buttons row box">
+	<div class="facebook none flexbox" href="#" onclick="window.open(
+			'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+			'facebook-share-dialog',
+			'width=626,height=436'); return false;">
+		<button class="ui facebook button"><i class="facebook icon"></i>Share</button>
 	</div>
-	<div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
-		<div class="cards row box">
+	<div class="twitter none flexbox" onclick="window.open('https://twitter.com/intent/tweet?text=Read &quot;(GSoC) Pure-Go client for XRootD: Weeks 7–10  https:\/\/egormatirov.github.io\/post\/gsoc-go-xrootd-4\/','_self')">
+		<button class="ui twitter button"><i class="twitter icon"></i>Tweet</button>
+	</div>
+</section>
+</section>
+		<section class="ui secondary attached segment copyright">
 			
-	<article class="blog-card none flexbox" style="background-image: url(/images/gopherswrench.jpg)">
-<img class="image" src="/images/gopherswrench.jpg"></img>
-<div class="title-content twemoji">
-	<h3><a class="title" href=https://egormatirov.github.io/post/gsoc-go-xrootd-4/>(GSoC) Pure-Go client for XRootD: Weeks 7–10</a></h3>
-	<div class="intro twemoji"><br><br></div>
-</div>
-<div class="utility-info">
-	<ul class="utility-list">
+		</section>
 		
-		<div><span><i class="calendar icon"></i>Jul 25, 2018</span></div>
-		<div><span><i class="clock icon"></i>2 min read</span></div>
-	</ul>
-</div>
-<div class="color-overlay"></div>
-</article>
-
-	
-<article class="blog-card none flexbox" style="background-image: url(/images/gopherswim.jpg)">
-<img class="image" src="/images/gopherswim.jpg"></img>
-<div class="title-content twemoji">
-	<h3><a class="title" href=https://egormatirov.github.io/post/gsoc-go-xrootd-3/>(GSoC) Pure-Go client for XRootD: Weeks 5 &amp; 6</a></h3>
-	<div class="intro twemoji"><br><br></div>
-</div>
-<div class="utility-info">
-	<ul class="utility-list">
-		
-		<div><span><i class="calendar icon"></i>Jun 26, 2018</span></div>
-		<div><span><i class="clock icon"></i>1 min read</span></div>
-	</ul>
-</div>
-<div class="color-overlay"></div>
-</article>
-
-	
-<article class="blog-card none flexbox" style="background-image: url(/images/biplane.jpg)">
-<img class="image" src="/images/biplane.jpg"></img>
-<div class="title-content twemoji">
-	<h3><a class="title" href=https://egormatirov.github.io/post/gsoc-go-xrootd-2/>(GSoC) Pure-Go client for XRootD: Weeks 3 &amp; 4</a></h3>
-	<div class="intro twemoji"><br><br></div>
-</div>
-<div class="utility-info">
-	<ul class="utility-list">
-		
-		<div><span><i class="calendar icon"></i>Jun 11, 2018</span></div>
-		<div><span><i class="clock icon"></i>2 min read</span></div>
-	</ul>
-</div>
-<div class="color-overlay"></div>
-</article>
-
-	
-<article class="blog-card none flexbox" style="background-image: url(/images/gopherswrench.jpg)">
-<img class="image" src="/images/gopherswrench.jpg"></img>
-<div class="title-content twemoji">
-	<h3><a class="title" href=https://egormatirov.github.io/post/gsoc-go-xrootd-1/>(GSoC) Pure-Go client for XRootD: Weeks 1 &amp; 2</a></h3>
-	<div class="intro twemoji"><br><br></div>
-</div>
-<div class="utility-info">
-	<ul class="utility-list">
-		
-		<div><span><i class="calendar icon"></i>May 27, 2018</span></div>
-		<div><span><i class="clock icon"></i>2 min read</span></div>
-	</ul>
-</div>
-<div class="color-overlay"></div>
-</article>
-
-	
-
-
-		</div>
 	</div>
 </div>
 
